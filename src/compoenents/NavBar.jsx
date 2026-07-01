@@ -11,10 +11,12 @@ function NavBar() {
 
           {/* Logo */}
           <div className="text-2xl font-bold">
-            <span>THE-</span>
-            <span className="text-teal-600 font-orbitron">
-              ARYAN
-            </span>
+            <a href="/">
+                <span>THE-</span>
+                <span className="text-teal-600 font-orbitron">
+                ARYAN
+                </span>
+            </a>
           </div>
 
           {/* Desktop Menu */}
@@ -40,9 +42,9 @@ function NavBar() {
           </button>
 
           {/* Mobile Menu Icon */}
-          <button className="md:hidden text-3xl">
+          {/* <button className="md:hidden text-3xl">
             <HiOutlineMenuAlt3 />
-          </button>
+          </button> */}
 
         </div>
       </div>

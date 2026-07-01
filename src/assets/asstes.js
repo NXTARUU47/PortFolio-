@@ -1,12 +1,12 @@
 import { FaCode, FaDesktop, FaMicrochip, FaMobile, FaReact, FaRProject, FaSchool } from 'react-icons/fa6'
-import profileImg from '../assets/profile.avif'
+// import profileImg from '../assets/profile.avif'
 import { FaProjectDiagram } from 'react-icons/fa'
 
 
 
-export const assets = {
-    profileImg,
-}
+// export const assets = {
+//     profileImg,
+// }
 
 
 export const navMenu = ['Home', 'Work', 'Skills', 'About', 'Contact']

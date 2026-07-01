@@ -1,0 +1,98 @@
+/* ===========================
+   Global Responsive CSS
+=========================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Videos */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Buttons */
+button {
+  touch-action: manipulation;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Prevent text overflow */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  word-wrap: break-word;
+}
+
+/* Small Devices */
+@media (max-width: 640px) {
+
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  h1 {
+    line-height: 1.1;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+
+  button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1280px) {
+
+  .container {
+    max-width: 1280px;
+  }
+}
