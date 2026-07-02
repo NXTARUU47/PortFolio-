@@ -1,41 +1,43 @@
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const sendEmail = async (req, res) => {
   try {
     const { name, email, subject, message } = req.body;
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-
-    await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+    const response = await resend.emails.send({
+      from: "Portfolio <onboarding@resend.dev>",
+      to: process.env.EMAIL_TO,
       replyTo: email,
-      to: process.env.EMAIL_USER,
-      subject: subject,
+      subject: `Portfolio Contact: ${subject}`,
       html: `
-        <h2>New Portfolio Message</h2>
+        <h2>📩 New Portfolio Contact</h2>
+
         <p><strong>Name:</strong> ${name}</p>
+
         <p><strong>Email:</strong> ${email}</p>
+
         <p><strong>Subject:</strong> ${subject}</p>
-        <p><strong>Message:</strong> ${message}</p>
+
+        <p><strong>Message:</strong></p>
+
+        <p>${message}</p>
       `,
     });
 
-    res.json({
+    res.status(200).json({
       success: true,
-      message: "Email Sent Successfully",
+      message: "Message sent successfully!",
+      data: response,
     });
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error(error);
 
     res.status(500).json({
       success: false,
-      message: err.message,
+      message: "Failed to send message.",
+      error: error.message,
     });
   }
 };
