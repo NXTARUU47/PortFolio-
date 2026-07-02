@@ -42,7 +42,7 @@ function NavBarMobile() {
 
           <button
             onClick={toggleMenu}
-            className="text-3xl"
+            className="text-3xl  pl-90 cursor-pointer"
           >
             <HiX />
           </button>
@@ -55,7 +55,7 @@ function NavBarMobile() {
               key={index}
               href={`#${item}`}
               onClick={closeMenu}
-              className="text-xl text-zinc-700 hover:text-cyan-600 transition duration-300"
+              className="text-xl text-zinc-700 hover:text-cyan-600 transition duration-300 cursor-pointer"
             >
               {item}
             </a>
@@ -64,7 +64,7 @@ function NavBarMobile() {
           {/* Resume Button */}
           <button
             onClick={closeMenu}
-            className="mt-2 flex items-center gap-2 bg-black text-white px-8 py-3 rounded-full hover:bg-zinc-800 transition"
+            className="mt-2 flex items-center gap-2 bg-black text-white px-8 py-3 rounded-full cursor-pointer hover:bg-zinc-800 transition"
           >
             Resume
             <FaArrowRight />

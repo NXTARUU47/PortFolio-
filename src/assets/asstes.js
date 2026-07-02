@@ -16,27 +16,27 @@ export const skillsData = [
     {
         icon: FaMicrochip,
         title: 'Backend',
-        technologies: ['Python', 'Postgres', 'Redis', 'Next.js']
+        technologies: ['Python', 'Java', 'PHP']
     },
     {
         icon: FaReact,
         title: 'Frontend',
-        technologies: ['React', 'Html', 'Css', 'Tailwindcss']
+        technologies: ['React', 'Html', 'Css']
     },
     {
         icon: FaDesktop,
         title: 'Web',
-        technologies: ['Nginx', 'Linux', 'Wsgi', 'Server']
+        technologies: ['Server']
     },
     {
         icon: FaCode ,
         title: 'DevOps',
-        technologies: ['Linux', 'Git', 'Github', 'Docker', 'Jenkins', 'CI/CD']
+        technologies: ['Git', 'Github']
     },
     {
         icon: FaMobile,
         title: 'Mobile',
-        technologies: ['React Native', 'Android', 'Flutter', 'Java']
+        technologies: ['Android', 'Java']
     },
 ]
 
@@ -65,7 +65,7 @@ export const projectData = [
         title: 'Abmbivista',
         description: 'A mood-based interior design suggestion tool that uses AI',
         image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHByb2plY3R8ZW58MHx8MHx8fDA%3D',
-        tech: ['Django', 'Tailwindcss', 'Python', 'Rest']
+        tech: ['Tailwindcss', 'Python', 'Rest']
     }
 ]
 

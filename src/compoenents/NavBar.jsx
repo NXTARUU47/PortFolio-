@@ -7,7 +7,7 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 function NavBar() {
  
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm backdrop-blur-3xl">
       <div className="max-w-7xl mx-auto px-5 py-4">
         <div className="flex items-center justify-between">
 
