@@ -83,6 +83,6 @@ export const profileData = [
     {
         icon: FaProjectDiagram ,
         title: 'Projects',
-        technologies : ['Built more than 25+']
+        technologies : ['Crafted user-friendly web apps.']
     },
 ]
