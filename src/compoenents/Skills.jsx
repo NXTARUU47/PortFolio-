@@ -3,7 +3,8 @@ import { skillsData } from "../assets/asstes";
 
 const Skills = () => {
   return (
-    <div id="skils" className="py-20">
+    /* FIXED: Capitalized the 'S' to match your array values ("Skills") */
+    <div id="Skills" className="py-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
@@ -23,19 +24,12 @@ const Skills = () => {
                 key={index}
                 className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-10 hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
               >
-                {/* Icon */}
-                <div
-                  className="w-14 h-14 rounded-full
-         bg-gray-100 flex items-center justify-center mb-4 mx-auto"
-                >
+                <div className="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center mb-4 mx-auto">
                   <Icon className="text-3xl" />
                 </div>
-
                 <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center cursor-pointer">
                   {skill.title}
                 </h3>
-
-                {/* Technologies */}
                 <div className="flex flex-wrap justify-center">
                   {skill.technologies.map((tech, i) => (
                     <span

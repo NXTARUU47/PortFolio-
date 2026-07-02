@@ -7,12 +7,10 @@ import Photo from "../assets/Image/Photo.png";
 
 function About() {
   return (
-    <div id="#About" className="py-20">
+    /* FIXED: Changed id="#About" to id="About" so your navigation link can jump here */
+    <div id="About" className="py-20">
       <div className="max-w-7xl mx-auto px-6">
-        <div
-          className="
-            grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-1">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="text-teal-800">About</span>
@@ -36,38 +34,12 @@ function About() {
                 return (
                   <div
                     key={index}
-                    className="
-          group
-          w-full sm:w-50 p-6
-          border border-zinc-300
-          rounded-2xl
-          bg-white
-          cursor-pointer
-          transition-all duration-300
-          hover:-translate-y-2
-          hover:shadow-xl
-          hover:border-teal-500
-        "
+                    className="group w-full sm:w-50 p-6 border border-zinc-300 rounded-2xl bg-white cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-teal-500"
                   >
-                    <Icon
-                      className="
-            text-3xl mb-4 text-zinc-700
-            transition-all duration-300
-            group-hover:text-teal-600
-            group-hover:scale-110
-          "
-                    />
-
-                    <h1
-                      className="
-            text-xl font-bold mb-4
-            transition-colors duration-300
-            group-hover:text-teal-600
-          "
-                    >
+                    <Icon className="text-3xl mb-4 text-zinc-700 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110" />
+                    <h1 className="text-xl font-bold mb-4 transition-colors duration-300 group-hover:text-teal-600">
                       {data.title}
                     </h1>
-
                     <p className="font-space text-gray-600">
                       {data.technologies.join(", ")}
                     </p>
@@ -76,25 +48,19 @@ function About() {
               })}
             </div>
             <div className="flex items-center">
-              {/* FIXED: Removed 'hidden md:' so it displays on mobile view while keeping your design */}
               <a
                 href="/Aryan_Chauhan_Resume.pdf"
-                download
-                className="flex items-center gap-2
-              bg-gray-900 text-white
-              px-6 py-3 rounded-full
-              hover:bg-zinc-600 hover:-translate-y-1 hover:shadow-lg
-              transition-all duration-300 cursor-pointer w-full sm:w-auto justify-center sm:justify-start"
+                download="Aryan_Chauhan_Resume.pdf" /* Explicitly naming the file helps mobile OS */
+                target="_blank" /* Forces a fallback view if download fails */
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-full hover:bg-zinc-600 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer w-full sm:w-auto justify-center sm:justify-start"
               >
                 Download Resume
                 <FaArrowRight className="text-sm" />
               </a>
             </div>
           </div>
-          <div
-            className="order-1 lg:order-2 flex justify-center
-          "
-          >
+          <div className="order-1 lg:order-2 flex justify-center">
             <div className="relative w-full mx-w-md">
               <div className="flex justify-center lg:justify-end">
                 <img

@@ -21,17 +21,15 @@ function NavBarMobile() {
 
   return (
     <>
-      {/* Mobile Navbar Hamburger Trigger */}
-      <div className="flex justify-between items-center">
-        <button
-          onClick={toggleMenu}
-          className="text-3xl text-zinc-800 cursor-pointer"
-        >
-          {isOpen ? <HiX /> : <HiMenuAlt3 />}
-        </button>
-      </div>
+      {/* The Single Mobile Navbar Hamburger Icon */}
+      <button
+        onClick={toggleMenu}
+        className="text-3xl text-zinc-800 cursor-pointer flex items-center justify-center"
+      >
+        <HiMenuAlt3 />
+      </button>
 
-      {/* Mobile Menu Overlay Panel */}
+      {/* Mobile Menu Slide-Over Overlay */}
       <div
         className={`fixed top-0 right-0 w-full h-screen bg-white z-50 transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
@@ -44,7 +42,6 @@ function NavBarMobile() {
             <span className="text-teal-600 font-orbitron">ARYAN</span>
           </div>
 
-          {/* FIXED: Removed the hardcoded 'pl-90' so the close button sits cleanly on the right side of all mobile screens */}
           <button
             onClick={toggleMenu}
             className="text-3xl text-zinc-800 cursor-pointer"
@@ -67,7 +64,6 @@ function NavBarMobile() {
           ))}
 
           {/* Resume Button */}
-          {/* FIXED: Attached the functional route handler so it actually works on touch devices */}
           <button
             onClick={handleResumeClick}
             className="mt-2 flex items-center gap-2 bg-black text-white px-8 py-3 rounded-full cursor-pointer hover:bg-zinc-800 transition"

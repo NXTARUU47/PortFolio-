@@ -5,7 +5,7 @@ import "./work.css";
 
 function Work() {
   return (
-    <div id="work" className="py-20">
+    <div id="Work" className="py-20">
       <div className="max-w-7xl mx-auto px-6 py-6">
         <div className="mb-16 text-center">
           {/* FIXED: Closed the h2 tag properly here so it doesn't break mobile typography */}
@@ -54,7 +54,7 @@ function Work() {
                 </div>
 
                 <div>
-                  <a href="https://github.com/aryan21-21/">
+                  <a href="/">
                     <span className="inline-flex items-center gap-2 text-teal-600 text-sm font-space font-medium cursor-pointer hover:gap-3 transition-all duration-300">
                       View Project
                       <FaArrowRight />
@@ -68,13 +68,15 @@ function Work() {
       </div>
       
       {/* FIXED: Removed 'hidden md:' so the Show More button shows up perfectly on mobile */}
-      <button
+      <a href="/">
+          <button
         className="flex items-center gap-2 border border-gray-400 px-8 py-4 rounded-full hover:text-slate-800 hover:translate-y-1  
                 transition duration-300 cursor-pointer mx-auto text-sm sm:text-base justify-center"
       >
         Show More
         <FaArrowRight />
       </button>
+      </a>
     </div>
   );
 }

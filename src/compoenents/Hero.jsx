@@ -27,15 +27,19 @@ function Hero() {
               Creating fast, secure, and user-friendly websites.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
-              <button className="flex items-center gap-2 px-8 py-4 bg-black text-white rounded-full hover:bg-gray-800 transition duration-300 cursor-pointer">
+              <a href="#Work">
+                <button className="flex items-center gap-2 px-8 py-4 bg-black text-white rounded-full hover:bg-gray-800 transition duration-300 cursor-pointer">
                 View My Work
                 <FaArrowRight />
               </button>
+              </a>
 
-              <button className="flex items-center gap-2 px-8 py-4 border border-slate-400 rounded-full hover:border-slate-800 hover:bg-slate-100 transition duration-300 cursor-pointer">
+              <a href="#Contact">
+                <button className="flex items-center gap-2 px-8 py-4 border border-slate-400 rounded-full hover:border-slate-800 hover:bg-slate-100 transition duration-300 cursor-pointer">
                 Contact Me
                 <FaArrowRight />
               </button>
+              </a>
             </div>
           </div>
 
