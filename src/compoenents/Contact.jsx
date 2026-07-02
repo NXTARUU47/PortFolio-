@@ -12,7 +12,6 @@ function Contact() {
 
   const [loading, setLoading] = useState(false);
 
-  // ✅ toast state
   const [toast, setToast] = useState({
     show: false,
     message: "",
@@ -26,7 +25,6 @@ function Contact() {
     });
   };
 
-  // ✅ show message function
   const showMessage = (message, type = "success") => {
     setToast({
       show: true,
@@ -70,26 +68,26 @@ function Contact() {
   };
 
   return (
-    <div id="Contact" className="py-20">
-      <div className="max-w-7xl mx-auto px-6">
+    <div id="Contact" className="py-12 md:py-20 transition-all duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Heading */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+        <div className="text-center mb-10 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
             Get In <span className="text-teal-800">Touch</span>
           </h1>
 
-          <p>
+          <p className="text-sm sm:text-base text-zinc-600 max-w-md mx-auto">
             Have a project in mind or want to discuss potential opportunities?
           </p>
         </div>
 
-        {/* Form */}
+        {/* Form Container */}
         <div className="max-w-3xl mx-auto">
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
 
             {/* Name + Email */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <input
                 type="text"
                 name="name"
@@ -97,7 +95,7 @@ function Contact() {
                 onChange={handleChange}
                 placeholder="Enter Name"
                 required
-                className="px-4 py-3 w-full border border-zinc-500 rounded outline-none"
+                className="px-4 py-3 w-full border border-zinc-500 rounded outline-none text-sm sm:text-base"
               />
 
               <input
@@ -107,7 +105,7 @@ function Contact() {
                 onChange={handleChange}
                 placeholder="Enter Email"
                 required
-                className="px-4 py-3 w-full border border-zinc-500 rounded outline-none"
+                className="px-4 py-3 w-full border border-zinc-500 rounded outline-none text-sm sm:text-base"
               />
             </div>
 
@@ -119,48 +117,49 @@ function Contact() {
               onChange={handleChange}
               placeholder="Enter Subject"
               required
-              className="w-full px-5 py-3 border border-zinc-500 rounded outline-none"
+              className="w-full px-4 sm:px-5 py-3 border border-zinc-500 rounded outline-none text-sm sm:text-base"
             />
 
             {/* Message */}
             <textarea
-              rows="6"
+              rows="5"
               name="message"
               value={formData.message}
               onChange={handleChange}
               placeholder="Enter Your Message"
               required
-              className="w-full px-5 py-3 border border-zinc-500 rounded outline-none resize-none"
+              className="w-full px-4 sm:px-5 py-3 border border-zinc-500 rounded outline-none resize-none text-sm sm:text-base"
             ></textarea>
 
-            {/* Button + RIGHT MESSAGE */}
-            <div className="flex items-center gap-4 justify-center sm:justify-start">
-
+            {/* Submit Button */}
+            <div className="w-full sm:w-auto">
               <button
                 type="submit"
                 disabled={loading}
-                className="flex items-center gap-2 px-8 py-3 bg-zinc-800 text-white cursor-pointer rounded-full hover:bg-teal-700 transition-all duration-300 disabled:opacity-60"
+                className="flex items-center justify-center gap-2 px-8 py-3 bg-zinc-800 text-white cursor-pointer rounded-full hover:bg-teal-700 transition-all duration-300 disabled:opacity-60 w-full sm:w-auto text-sm sm:text-base"
               >
                 {loading ? "Sending..." : "Send Message"}
-                {!loading && <FaArrowRight />} 
+                {!loading && <FaArrowRight />}
               </button>
-
-              {/* ✅ RIGHT SIDE MESSAGE */}
-              {toast.show && (
-                <div
-                  className={`px-4 py-2 rounded-md text-white text-sm shadow-md transition-all duration-300
-                  ${toast.type === "success" ? "bg-green-600" : "bg-red-600"}
-                  `}
-                >
-                  {toast.message}
-                </div>
-              )}
-
             </div>
 
           </form>
         </div>
       </div>
+
+      {/* Floating Toast Notification - highly responsive positioning */}
+      {toast.show && (
+        <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-sm">
+          <div
+            className={`px-4 py-3 rounded-lg text-white text-sm shadow-xl text-center font-medium animate-bounce
+              ${toast.type === "success" ? "bg-green-600" : "bg-red-600"}
+            `}
+          >
+            {toast.message}
+          </div>
+        </div>
+      )}
+      
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { FaCode } from "react-icons/fa";
 import profile from "../assets/Image/profile.avif";
 import { FaArrowRight } from "react-icons/fa6";
 import Photo from "../assets/Image/Photo.png";
+
 function About() {
   return (
     <div id="#About" className="py-20">
@@ -75,14 +76,15 @@ function About() {
               })}
             </div>
             <div className="flex items-center">
+              {/* FIXED: Removed 'hidden md:' so it displays on mobile view while keeping your design */}
               <a
                 href="/Aryan_Chauhan_Resume.pdf"
                 download
-                className="hidden md:flex items-center gap-2
-             bg-gray-900 text-white
-             px-6 py-3 rounded-full
-             hover:bg-zinc-600 hover:-translate-y-1 hover:shadow-lg
-             transition-all duration-300 cursor-pointer"
+                className="flex items-center gap-2
+              bg-gray-900 text-white
+              px-6 py-3 rounded-full
+              hover:bg-zinc-600 hover:-translate-y-1 hover:shadow-lg
+              transition-all duration-300 cursor-pointer w-full sm:w-auto justify-center sm:justify-start"
               >
                 Download Resume
                 <FaArrowRight className="text-sm" />

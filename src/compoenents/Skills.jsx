@@ -21,7 +21,7 @@ const Skills = () => {
             return (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-2xl p-10 hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-10 hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
               >
                 {/* Icon */}
                 <div
@@ -37,17 +37,17 @@ const Skills = () => {
 
                 {/* Technologies */}
                 <div className="flex flex-wrap justify-center">
-                {skill.technologies.map((tech, i) => (
+                  {skill.technologies.map((tech, i) => (
                     <span
-                    key={i}
-                    className="text-sm text-gray-700 hover:text-teal-600 transition-colors duration-300"
+                      key={i}
+                      className="text-sm text-gray-700 hover:text-teal-600 transition-colors duration-300"
                     >
-                    {tech}
-                    {i !== skill.technologies.length - 1 && (
+                      {tech}
+                      {i !== skill.technologies.length - 1 && (
                         <span className="mx-2 text-gray-400">|</span>
-                    )}
+                      )}
                     </span>
-                ))}
+                  ))}
                 </div>
               </div>
             );
