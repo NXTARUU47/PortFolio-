@@ -28,7 +28,7 @@ function NavBar() {
 
           {/* Resume Button */}
           <button
-            onClick={() => window.open("/Aryan_Chauhan_Resume.pdf", "_blank")}
+            onClick={() => window.open("/resume.pdf", "_blank")}
             className="hidden md:flex items-center gap-2 border border-gray-400 px-6 py-3 rounded-full hover:text-slate-800 hover:-translate-y-1 transition duration-300 cursor-pointer"
           >
             Resume
