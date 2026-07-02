@@ -18,14 +18,6 @@ function NavBarMobile() {
     <>
       {/* Mobile Navbar */}
       <div className="flex justify-between items-center py-5">
-
-        {/* Logo */}
-        {/* <div className="text-2xl font-bold">
-          <span className="text-zinc-800">THE-</span>
-          <span className="text-cyan-600 font-orbitron">ARYAN</span>
-        </div> */}
-
-        {/* Menu Button */}
         <button
           onClick={toggleMenu}
           className="text-3xl text-zinc-800"
@@ -43,10 +35,10 @@ function NavBarMobile() {
         {/* Header */}
         <div className="flex justify-between items-center p-6 border-b">
 
-          {/* <div className="text-2xl font-bold">
+          <div className="text-2xl font-bold">
             <span>THE-</span>
-            <span className="text-cyan-600 font-orbitron">ARYAN</span>
-          </div> */}
+            <span className="text-teal-600 font-orbitron">ARYAN</span>
+          </div>
 
           <button
             onClick={toggleMenu}
@@ -55,7 +47,6 @@ function NavBarMobile() {
             <HiX />
           </button>
         </div>
-
         {/* Navigation Links */}
         <div className="flex flex-col items-center mt-12 gap-8">
 
@@ -73,7 +64,7 @@ function NavBarMobile() {
           {/* Resume Button */}
           <button
             onClick={closeMenu}
-            className="mt-6 flex items-center gap-2 bg-black text-white px-8 py-3 rounded-full hover:bg-zinc-800 transition"
+            className="mt-2 flex items-center gap-2 bg-black text-white px-8 py-3 rounded-full hover:bg-zinc-800 transition"
           >
             Resume
             <FaArrowRight />
