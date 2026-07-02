@@ -1,0 +1,88 @@
+import React, { useState } from "react";
+import { navMenu } from "../assets/asstes";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { FaArrowRight } from "react-icons/fa6";
+
+function NavBarMobile() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    <>
+      {/* Mobile Navbar */}
+      <div className="flex justify-between items-center py-5">
+
+        {/* Logo */}
+        {/* <div className="text-2xl font-bold">
+          <span className="text-zinc-800">THE-</span>
+          <span className="text-cyan-600 font-orbitron">ARYAN</span>
+        </div> */}
+
+        {/* Menu Button */}
+        <button
+          onClick={toggleMenu}
+          className="text-3xl text-zinc-800"
+        >
+          {isOpen ? <HiX /> : <HiMenuAlt3 />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`fixed top-0 right-0 w-full h-screen bg-white z-50 transform transition-transform duration-300 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Header */}
+        <div className="flex justify-between items-center p-6 border-b">
+
+          {/* <div className="text-2xl font-bold">
+            <span>THE-</span>
+            <span className="text-cyan-600 font-orbitron">ARYAN</span>
+          </div> */}
+
+          <button
+            onClick={toggleMenu}
+            className="text-3xl"
+          >
+            <HiX />
+          </button>
+        </div>
+
+        {/* Navigation Links */}
+        <div className="flex flex-col items-center mt-12 gap-8">
+
+          {navMenu.map((item, index) => (
+            <a
+              key={index}
+              href={`#${item}`}
+              onClick={closeMenu}
+              className="text-xl text-zinc-700 hover:text-cyan-600 transition duration-300"
+            >
+              {item}
+            </a>
+          ))}
+
+          {/* Resume Button */}
+          <button
+            onClick={closeMenu}
+            className="mt-6 flex items-center gap-2 bg-black text-white px-8 py-3 rounded-full hover:bg-zinc-800 transition"
+          >
+            Resume
+            <FaArrowRight />
+          </button>
+
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default NavBarMobile;
