@@ -22,7 +22,7 @@ function Footer() {
                     </a>
                 </div>
                 <div className="text-zinc-900 text-sm">
-                    @2026 The-Aryan Devloper,All right resetved
+                    @2026 The-Aryan Devloper,All right reserved
                 </div>
             </div>
         </div>

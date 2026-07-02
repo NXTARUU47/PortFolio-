@@ -1,6 +1,6 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import profile from "../assets/Image/profile.avif";
+import Photo from "../assets/Image/Photo.png";
 import './Hero.css'
 function Hero() {
   return (
@@ -44,7 +44,7 @@ function Hero() {
             <div className="relative w-72 h-72 sm:w-80 sm:h-80 floating">
               <div className="absolute inset-0 rounded-2xl overflow-hidden border-4 border-slate-600/30 glow">
                 <img
-                  src={profile}
+                  src={Photo}
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />

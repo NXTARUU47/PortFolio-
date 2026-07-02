@@ -3,7 +3,7 @@ import { profileData } from "../assets/asstes";
 import { FaCode } from "react-icons/fa";
 import profile from "../assets/Image/profile.avif";
 import { FaArrowRight } from "react-icons/fa6";
-
+import Photo from "../assets/Image/Photo.png";
 function About() {
   return (
     <div id="#About" className="py-20">
@@ -93,9 +93,9 @@ function About() {
             <div className="relative w-full mx-w-md">
               <div className="flex justify-center lg:justify-end">
                 <img
-                  src={profile}
+                  src={Photo}
                   alt="Profile"
-                  className="w-64 sm:w-72 md:w-80 lg:w-96 h-auto object-cover rounded-xl shadow-xl"
+                  className="w-64 sm:w-72 md:w-80 lg:w-96 h-auto object-cover rounded-4xl shadow-xl"
                 />
               </div>
             </div>
