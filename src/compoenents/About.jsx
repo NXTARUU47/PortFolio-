@@ -75,15 +75,18 @@ function About() {
               })}
             </div>
             <div className="flex items-center">
-              <button
-                className="hidden md:flex items-center gap-2 border 
-              bg-gray-900 text-white
-              border-gray-400 px-6 py-3 rounded-full hover: hover:translate-y-1  
-                  transition duration-300 cursor-pointer"
+              <a
+                href="/Aryan_Chauhan_Resume.pdf"
+                download
+                className="hidden md:flex items-center gap-2
+             bg-gray-900 text-white
+             px-6 py-3 rounded-full
+             hover:bg-zinc-600 hover:-translate-y-1 hover:shadow-lg
+             transition-all duration-300 cursor-pointer"
               >
-                Resume Download
-                <FaArrowRight />
-              </button>
+                Download Resume
+                <FaArrowRight className="text-sm" />
+              </a>
             </div>
           </div>
           <div
