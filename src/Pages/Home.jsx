@@ -4,6 +4,9 @@ import Hero from "../compoenents/Hero"
 import Work from "../compoenents/Work"
 import Skills from '../compoenents/Skills'
 import About from '../compoenents/About'
+import Contact from '../compoenents/Contact'
+import Footer from '../compoenents/Footer'
+
 const Home = () => {
   return (
     <div>
@@ -11,7 +14,9 @@ const Home = () => {
       <Hero/>
       <Work/>
       <Skills/>
-      <About/>
+      <a href="#About"><About/></a>
+      <Contact/>
+      <Footer/>
     </div>
   )
 }

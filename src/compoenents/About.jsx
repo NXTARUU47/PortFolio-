@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 function About() {
   return (
-    <div id="about" className="py-20">
+    <div id="#About" className="py-20">
       <div className="max-w-7xl mx-auto px-6">
         <div
           className="
