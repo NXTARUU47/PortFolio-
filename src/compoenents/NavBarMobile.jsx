@@ -15,7 +15,7 @@ function NavBarMobile() {
   };
 
   const handleResumeClick = () => {
-    window.open("/resume.pdf", "_blank");
+    window.open("/Aryan_Chauhan_Resume.pdf", "_blank");
     closeMenu();
   };
 
