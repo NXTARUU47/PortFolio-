@@ -41,31 +41,36 @@ function Contact() {
     }, 2500);
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
 
-    try {
-      await axios.post(
-        "https://portfolio-backend-750p.onrender.com",
-        formData
-      );
+  try {
+    const res = await axios.post(
+      "https://portfolio-backend-750p.onrender.com/api/contact",
+      formData
+    );
 
-      showMessage(res.data.message || "Message sent successfully!", "success");
+    showMessage(res.data.message || "Message sent successfully!", "success");
 
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      console.log(error);
-      showMessage("Failed to send message!", "error");
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+  } catch (error) {
+    console.error(error);
+
+    if (error.response) {
+      console.log(error.response.data);
     }
 
-    setLoading(false);
-  };
+    showMessage("Failed to send message!", "error");
+  }
+
+  setLoading(false);
+};
 
   return (
     <div id="Contact" className="py-12 md:py-20 transition-all duration-300">
