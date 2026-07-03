@@ -46,8 +46,8 @@ function Contact() {
     setLoading(true);
 
     try {
-      const res = await axios.post(
-        "http://localhost:5000/api/contact",
+      await axios.post(
+        "https://portfolio-backend-xxxx.onrender.com/api/contact",
         formData
       );
 
