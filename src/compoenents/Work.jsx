@@ -68,7 +68,7 @@ function Work() {
       </div>
       
       {/* FIXED: Removed 'hidden md:' so the Show More button shows up perfectly on mobile */}
-      <a href="/">
+      {/* <a href="/">
           <button
         className="flex items-center gap-2 border border-gray-400 px-8 py-4 rounded-full hover:text-slate-800 hover:translate-y-1  
                 transition duration-300 cursor-pointer mx-auto text-sm sm:text-base justify-center"
@@ -76,7 +76,7 @@ function Work() {
         Show More
         <FaArrowRight />
       </button>
-      </a>
+      </a> */}
     </div>
   );
 }
